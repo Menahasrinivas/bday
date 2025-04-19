@@ -2,39 +2,36 @@ import React, { useEffect, useState } from 'react';
 import './BirthdayWishes.css';
 import FireworksDisplay from './FireworksDisplay';
 
-const imageList = [
-  '/image1.jpg',
-  '/image2.jpg'
-  
-  
-];
-
-const BirthdayWishes = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+function BirthdayWishes() {
+  const [count, setCount] = useState(10);
+  const [showWishes, setShowWishes] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === imageList.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval); // cleanup
+    const countdown = async () => {
+      for (let i = 10; i > 0; i--) {
+        setCount(i);
+        await new Promise((res) => setTimeout(res, 1000));
+      }
+      setShowWishes(true);
+    };
+    countdown();
   }, []);
 
   return (
     <div className="main-container">
-      <h1 className="wish-text">🎉 Happy Birthday Lakshmi Akka ! 🎂💖</h1>
-      <img
-        src={imageList[currentImageIndex]}
-        alt="Birthday Surprise"
-        className="center-image rotating-image"
-      />
-      
-      <div className="confetti">💐🍫🎂🎈🎉</div>
+      {!showWishes ? (
+        <h1 className="countdown">{count}</h1>
+      ) : (
+        <>
+          <div className="wishes-box">
+            <h1 className="wish-text">🎉 Happy Birthday lakshmi akka! 🎂💖</h1>
+            <img src="./public/image1.jpg" alt="Birthday" className="center-image" />
+            <div className="confetti">💐🍫🎂🎈🎉</div>
+          </div>
+          <FireworksDisplay />
+        </>
+      )}
     </div>
   );
-};
-
-
+}
 export default BirthdayWishes
