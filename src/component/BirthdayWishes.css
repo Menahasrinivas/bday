@@ -125,6 +125,7 @@
   .wish-text {
     font-size: 26px;
     padding: 0 10px;
+    margin-top: 10px; 
   }
 
   .confetti {
@@ -142,6 +143,7 @@
 
   .wishes-box {
     padding: 10px;
+    padding-top: 30px; 
   }
 
   .fireworks-canvas {
@@ -150,6 +152,8 @@
     left: 0;
     z-index: 1; /* make sure image is above */
     pointer-events: none;
+    width: 100vw;
+    height: 100vh;
   }
 }
 
