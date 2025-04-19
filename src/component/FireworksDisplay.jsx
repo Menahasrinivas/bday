@@ -7,21 +7,8 @@ const FireworksDisplay = () => {
     useEffect(() => {
       const container = ref.current;
       if (!container) return;
-      <canvas
-            ref={canvasRef}
-              className="fireworks-canvas"
-               style={{
-              position: 'fixed',
-            top: 0,
-               left: 0,
-                 width: '100vw',
-                height: '100vh',
-                 zIndex: 1, // canvas stays behind image
-               pointerEvents: 'none',
-                       }}
-                      ></canvas>
-
-  
+     
+    
       const fireworks = new Fireworks(container, {
         speed: 2,
         acceleration: 1.05,
@@ -41,18 +28,7 @@ const FireworksDisplay = () => {
     }, []);
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
   
     return (
       <div
