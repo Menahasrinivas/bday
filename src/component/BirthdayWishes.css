@@ -42,7 +42,7 @@
   position: relative;
   z-index: 10;
   animation: sparkleGlow 2s infinite alternate;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .image-container {
@@ -66,6 +66,8 @@
   pointer-events: none;
   z-index: 9999;
 }
+
+
 
 
 @keyframes pulse {
@@ -113,25 +115,45 @@
 }
 
 /* Mobile Devices */
+
+
 @media (max-width: 600px) {
   .countdown {
     font-size: 48px;
   }
 
   .wish-text {
-    font-size: 32px;
+    font-size: 26px;
     padding: 0 10px;
   }
 
   .confetti {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .center-image {
-    width: 200px;
-    border-radius: 15px;
+    width: 85vw;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    z-index: 5;
+  }
+
+  .wishes-box {
+    padding: 10px;
+  }
+
+  .fireworks-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* make sure image is above */
+    pointer-events: none;
   }
 }
+
+
 
 /* Tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
