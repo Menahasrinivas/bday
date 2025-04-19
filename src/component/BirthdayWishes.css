@@ -1,0 +1,162 @@
+/* src/component/BirthdayWishes.css */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+  .countdown {
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+    animation: pulse 1s infinite;
+  }
+  
+  .wishes-box {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .wish-text {
+    font-size: 60px;
+    color: #ffffff;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .confetti {
+    font-size: 50px;
+    margin-top: 20px;
+    animation: floatUp 5s infinite linear;
+  }
+  .center-image {
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    animation: sparkleGlow 2s infinite alternate;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+  .image-container {
+    max-width: 100px; /* or 200px, depending on how small you want */
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* optional rounded corners */
+    box-shadow: 0 4px 10px rgba(177, 24, 157, 0.2)!important; /* optional shadow */
+  }
+  
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      color: #fff;
+    }
+    50% {
+      transform: scale(1.2);
+      color: #ffe600;
+    }
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100px);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes sparkleGlow {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+                  0 0 20px rgba(255, 215, 0, 0.4),
+                  0 0 30px rgba(255, 105, 180, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.7),
+                  0 0 60px rgba(255, 215, 0, 0.7),
+                  0 0 90px rgba(255, 105, 180, 0.6);
+    }
+  }
+  
+  /* Mobile Devices */
+@media (max-width: 600px) {
+    .countdown {
+      font-size: 48px;
+    }
+  
+    .wish-text {
+      font-size: 32px;
+      padding: 0 10px;
+    }
+  
+    .confetti {
+      font-size: 30px;
+    }
+  
+    .center-image {
+      width: 200px;
+      border-radius: 15px;
+    }
+  }
+  
+  /* Tablets */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .countdown {
+      font-size: 60px;
+    }
+  
+    .wish-text {
+      font-size: 40px;
+    }
+  
+    .confetti {
+      font-size: 36px;
+    }
+  
+    .center-image {
+      width: 250px;
+    }
+  }
+  
+  /* Desktops */
+  @media (min-width: 1025px) {
+    .countdown {
+      font-size: 80px;
+    }
+  
+    .wish-text {
+      font-size: 60px;
+    }
+  
+    .confetti {
+      font-size: 50px;
+    }
+  
+    .center-image {
+      width: 300px;
+    }
+  }
+  
