@@ -3,7 +3,7 @@ import './BirthdayWishes.css';
 import FireworksDisplay from './FireworksDisplay';
 
 const imageList = [
-  'public/image1.jpg',
+  '/image1.jpg',
   '/image2.jpg',
   '/image3.jpg',
   '/image4.jpg'
